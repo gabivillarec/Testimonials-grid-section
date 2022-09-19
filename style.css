@@ -1,0 +1,239 @@
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+:root{
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+/* font-family: 'Barlow Semi Condensed', sans-serif;   de 500 y 600*/
+
+body{
+
+    background-color: var(--Light-grayish-blue);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    height: 100vh;
+
+}
+
+.grid_container{
+    padding-top: 55px;
+    padding-bottom: 55px;
+    display: grid;
+    grid-template-columns: 325px ;
+    justify-content: center;
+    align-content: center;
+    row-gap: 20px;
+
+}
+
+.carta {
+
+    border:0;
+    border-radius: 7px;
+    padding: 30px 30px 30px 30px;
+
+}
+
+/*////////////////////////Estilos de cartas/////////////////////////*/
+
+.daniel{
+    position: relative;
+    background-color: var(--Moderate-violet);
+   
+}
+
+#fondo_daniel{
+    position: absolute;
+    right: 25px ;
+    top: 0 ;
+    z-index: 0;
+}
+
+.daniel h2{
+   position: relative;
+   z-index: 10;
+}
+
+#avatar_daniel{
+    border: 2px solid hsl(263, 77%, 70%);
+}
+
+#avatar_jonathan, #avatar_jeanette, #avatar_kira{
+    border: 0px;
+}
+
+#avatar_patrick{
+    border: 2px solid hsl(263, 55%, 52%);
+}
+
+
+.jonathan{
+    background-color: var(--Very-dark-grayish-blue);
+
+}
+
+.jeanette{
+    background-color: hsl(0, 0%, 100%);
+}
+
+.patrick{
+    background-color: var(--Very-dark-blackish-blue);
+}
+
+.kira{
+    background-color: hsl(0, 0%, 100%);
+}
+
+
+
+/*/////////////////general para todos////////////////////*/
+
+.daniel_avatar, .jonathan_avatar, .jeanette_avatar,
+.patrick_avatar, .kira_avatar{
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;  
+
+}
+
+#avatar_daniel, #avatar_jonathan, #avatar_jeanette, 
+#avatar_patrick, #avatar_kira{
+
+    border-radius: 50%;
+    width: 33px;
+    height: 33px;
+      
+}
+
+.hombres, .mujeres{
+
+    font-size: 1.578em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 25px;
+
+}
+
+.hombres_p, .mujeres_p{
+
+    padding-right: 20px;
+    line-height: 19px;
+
+}
+
+.nombres_hombres, .nombres_mujeres{
+
+    margin-left: 14px;   
+
+}
+
+.nombres_hombres h5, .nombres_mujeres h5{
+
+    font-size: 14px;
+    font-weight: 500;
+
+    
+}
+
+.nombres_hombres p, .nombres_mujeres p{
+
+    font-size: 11px;
+    margin-top: 2px;
+
+}
+
+.hombres, .nombres_hombres{
+
+    color: rgb(255, 255, 255); 
+
+}
+
+
+.nombres_hombres p, .hombres_p{
+
+    color: rgba(255, 255, 255, 0.70);
+
+}
+
+
+.mujeres, .nombres_mujeres{
+
+    color:rgba(0, 0, 0, 0.70);
+    
+}
+
+
+
+.mujeres_p{
+
+    color:rgba(0, 0, 0, 0.50);
+    
+}
+
+
+
+
+/*/////////////// ESTILO MEDIA GRID 1150px //////////////////*/
+
+@media (min-width: 1150px){
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid_container{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        grid-template-columns: repeat(4, 270px);
+        column-gap: 20px;
+       
+    }
+
+    #fondo_daniel{
+        right: 100px;
+    }
+
+    .daniel{
+        grid-column: 1 / 3;
+    }
+
+    .kira{
+        grid-column: 4 / 5;
+        grid-row: 1/ 3;
+    }
+
+    .patrick{
+        grid-column: 2 / 4 ;
+       
+    }
+
+    .carta {
+
+        padding: 20px 20px 30px 25px;
+    
+    }
+
+    .jean_paddin{
+        padding-right: 50px;
+    }
+    
+}
+
+
+
+
+
+
